@@ -1,0 +1,52 @@
+.mainDiv{
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    background-color: lightsteelblue;
+}
+
+
+.black{
+    background-color: black;
+}
+
+.white{
+    background-color: rgb(126, 144, 167);
+}
+
+table{
+    border-spacing: 0;
+    position: absolute;
+}
+
+td{
+    border-width: 1px;
+    border-color: maroon;
+    border-style: inset;
+    background-color: lightgray;
+    padding: 0px 0px 0px 0px;
+}
+
+.startPoint{
+    background-color: red;
+    padding: 0px 0px 0px 0px;
+}
+
+.endPoint{
+    background-color: blue;
+    padding: px 0px 0px 0px;
+}
+
+.bfs{
+    background-color: mediumturquoise;
+    transition: all 0.5s ease-out;
+}
+
+.path{
+    background-color: orange;
+    transition: all 0.5s ease-out;
+}
+
+.obstacle{
+    background-color: darkslateblue;
+}
