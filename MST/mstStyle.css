@@ -1,0 +1,146 @@
+body{
+    padding: 0 0 0 0;
+    border: 0 0 0 0;
+}
+
+input{
+    position: absolute;
+    left: 5px;
+    width: 100px;
+}
+
+button{
+    position: absolute;
+}
+
+
+#container{
+    position: absolute;
+    border: 2px solid lightblue;
+}
+
+#menuContainer{
+    border-right: 2px solid lightblue;
+    background-color: blanchedalmond;
+    position: absolute;
+}
+
+#addNodeDiv{
+    position: absolute;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+#addEdgeDiv{
+    position: absolute;
+    background-color: pink;
+    height: 120px;
+    border-radius: 5%;
+}
+
+#addEdgeDiv .textAreaDiv{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+}
+
+#addEdgeDiv .textNodeDiv{
+    position: absolute;
+    padding-left: 10px;
+}
+
+#addEdgeDiv input{
+    position: absolute;
+}
+
+#addEdgeDiv button{
+    height: 20px;
+    width: 80px;
+}
+
+#buttonsDiv{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: pink;
+    border-radius: 5%;
+}
+
+#buttonsDiv button{
+    height: 25px;
+}
+
+
+#loadTemplates{
+    width: 100%;
+    height: 100px;
+    background-color: pink;
+    position: absolute;
+    border-radius: 5%;
+    text-align: center;
+}
+
+
+#loadTemplates button{
+    height: 25px;
+}
+
+
+#tableContainer{
+    position: absolute;
+}
+
+table{
+    border-spacing: 0;
+    position: absolute;
+}
+
+td{
+    border-width: 1px;
+    border-color: lightblue;
+    border-style: inset;
+    background-color: lightgray;
+
+    padding: 0px 0px 0px 0px;
+    position: relative;
+}
+
+
+.edge{
+    width: 2px;
+    background-color:black;
+    position: absolute;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15;
+    color:black;
+}
+
+.startNode{
+    border: 2px dashed lightcoral !important;
+    background-color: lightcoral !important;
+}
+
+.node{
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+    top:0;
+    position:absolute;
+    z-index: 1;
+}
+
+
+
+.textNode{
+    position: absolute;
+}
+
+
+.visitedEdge{
+    background-color: red !important;
+}
