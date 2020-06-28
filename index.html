@@ -1,13 +1,56 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Data Structure</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Graph Algorithms</title>
 </head>
-<link rel="stylesheet" href="style.css">
+
+
 <body>
-    <a href="Graph Path/index.html">Shortest Path</a>
-    <a href="MST/mstMouseMove.html">Minimum Spanning Tree by Prim's Algorithm</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Path Finding
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="Graph Path/index.html?method=BFS">BFS</a>
+                  <a class="dropdown-item" href="Graph Path/index.html?method=DFS">DFS</a>
+                </div>
+              </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Minimum Spanning Tree
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="MST/mstIndex.html?method=prim">Prim's Algorithm</a>
+                <a class="dropdown-item" href="MST/mstIndex.html?method=kruskal">Kruskal's Algorithm</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav> 
+      
+      <div class="jumbotron jumbotron-extension">
+        <h1 class="display-4">Graph Algorithms</h1>
+        <hr class="my-4">
+        <p>This site provides visulization of important graph algorithms that are taught in uppper division courses.</p>
+      </div>
+    
+    
 </body>
+  <style>
+    .jumbotron-extension{
+      margin-top: 5rem !important;
+    }
+  </style>
+    <script src="main.js"></script>
 </html>

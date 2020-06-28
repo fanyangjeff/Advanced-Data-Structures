@@ -1,8 +1,9 @@
+
 .mainDiv{
     width: 80%;
     height: 70%;
     position: absolute;
-    background-color: lightsteelblue;
+    background-color: lightblue;
 }
 
 .black{
@@ -13,6 +14,12 @@
     background-color: rgb(126, 144, 167);
 }
 
+.btn-group-extension{
+    margin-left: 20px;
+    margin-top: 20px; 
+}
+
+
 table{
     border-spacing: 0;
     position: absolute;
@@ -22,7 +29,7 @@ td{
     border-width: 1px;
     border-color: maroon;
     border-style: inset;
-    background-color: lightgray;
+    background-color:white;
     padding: 0px 0px 0px 0px;
 }
 

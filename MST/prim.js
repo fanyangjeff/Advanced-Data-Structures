@@ -40,7 +40,7 @@ Prim.prototype.findPath = function(){
                     newEdge.classList.add("visitedEdge");
                 }
             }
-        }, 400)
+        }, 100)
     }).then(() =>{
         _this.helper();
     })

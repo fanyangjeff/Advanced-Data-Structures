@@ -13,7 +13,7 @@ var numOfNodes = 0;
 
 var edgeIndex = 0;
 
-var templatePositions = [{'A': [1, 8], 'B':[2, 12], 'C':[6, 12], 'D':[7, 8], 'E':[4, 4], 'F':[2, 4]},
+var templatePositions = [{'A': [1, 8], 'B':[2, 12], 'C':[3, 8], 'D':[5, 10], 'E':[5, 6], 'F':[2, 4]},
                         {'A':[1, 8], 'B':[4, 12], 'C':[7, 10], 'D':[7, 6], 'E': [4, 4]}]
 window.onload = ()=>{
 

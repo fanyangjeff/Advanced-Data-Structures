@@ -1,10 +1,16 @@
 let dragTarget = undefined;
 
 window.onload = () =>{
+
+    setUpDropdownMenu();
+    setUpButtons();
+
+    
     
     var table = createTable(20, 40);
     document.body.appendChild(table);
 
+    
     adjustTablePosition();
     setStartPoint(1, 1);
     setEndPoint(17, 28);
@@ -12,26 +18,36 @@ window.onload = () =>{
     assignDraggablesForCells();
     assignDraggblesForStartPoint();
     assignDraggblesForEndPoint();
+    
 
-    let startButton = document.createElement("button");
-    startButton.width = "30px";
-    startButton.height = "20px";
-    startButton.style.display = "block";
-    startButton.innerHTML = "Show Path";
-    document.body.appendChild(startButton);
+}
 
-    startButton.onclick = function(){
+function setUpDropdownMenu(){
+    var dropdowns = document.querySelectorAll(".dropdown");
+    dropdowns.forEach(dropdown => {
+
+        dropdown.onmouseover = function(){
+            let menu = this.querySelector(".dropdown-menu");
+            menu.classList.add("show");
+        }
+
+        dropdown.onmouseleave = function(){
+            let menu = this.querySelector(".dropdown-menu");
+            menu.classList.remove("show");
+        }
+
+    })
+}
+
+
+function setUpButtons(){
+    let showPathButton = document.querySelector("#showPath");
+    showPathButton.onclick = function(){
         findShortestPath();
     }
 
-    let activateBlockButton = document.createElement("button");
-    activateBlockButton.width = "30px";
-    activateBlockButton.height = "20px";
-    activateBlockButton.style.display = "block";
-    activateBlockButton.innerHTML = "Draw block";
-    document.body.appendChild(activateBlockButton);
-
-    activateBlockButton.onclick = function(){
+    let drawBlocksButton = document.querySelector("#drawBlocks");
+    drawBlocksButton.onclick = function(){
         var rows = document.querySelectorAll("tr");
         rows.forEach((tr, i) =>{
             var nodes = document.querySelectorAll("td");
@@ -41,13 +57,8 @@ window.onload = () =>{
         })
     }
 
-    let clearButton = document.createElement("button");
-    document.body.appendChild(clearButton);
-    clearButton.width = "30px";
-    clearButton.height = "20px";
-    clearButton.style.display = "block";
-    clearButton.innerHTML = "clear";
-    clearButton.onclick = function(){
+    let clearPathButton = document.querySelector("#clearPath");
+    clearPathButton.onclick = function(){
         var rows = document.querySelectorAll("tr");
         rows.forEach((tr, i) =>{
             var nodes = document.querySelectorAll("td");
@@ -65,8 +76,9 @@ window.onload = () =>{
             })
         })
     }
-
 }
+
+
 
 function assignDraggablesForCells(){
     var rows = document.querySelectorAll("tr");
@@ -212,8 +224,8 @@ function createTable(r, column){
         for(var j = 0; j < column; j++){
             var cell = document.createElement("td");
             cell.id = i + "-" + j;
-            cell.style.width = "20px";
-            cell.style.height = "20px";
+            cell.style.width = "30px";
+            cell.style.height = "30px";
             cell.classList.add("cell");
             row.appendChild(cell);
         }
@@ -225,7 +237,7 @@ function createTable(r, column){
 function adjustTablePosition(){
     let table = document.querySelector("table");
     table.style.left = (document.body.offsetWidth - table.offsetWidth) / 2;
-    table.style.top =  (document.body.offsetHeight - table.offsetHeight) / 2;
+    table.style.top =  (document.body.offsetHeight - table.offsetHeight) / 2 + 50 + "px";
 }
 
 
